@@ -1,0 +1,14 @@
+%pointer {
+  cursor: pointer;
+}
+
+%container {
+  max-width: 1350px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  @extend %container;
+}

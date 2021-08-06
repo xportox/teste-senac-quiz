@@ -1,0 +1,47 @@
+.onda {
+  height: 100px;
+  display: flex;
+  margin-top: -10px;
+  margin-right: -8px;
+  margin-left: -8px;
+  margin-bottom: 150px;
+  background-color: white;
+  position: relative;
+
+  &__seletorTema {
+    align-self: center;
+    display: inline-flex;
+    width: auto;
+
+    & select {
+      font-size: 20px;
+    }
+  }
+
+  &--reverse {
+    transform: scaleY(-1);
+    margin-bottom: -10px;
+    padding-bottom: 190px;
+    margin-top: 150px;
+  }
+}
+
+.custom-shape-divider-top-1628149638 {
+  position: absolute;
+  bottom: -150px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1628149638 svg {
+  position: relative;
+  display: block;
+  width: calc(200% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-top-1628149638 .shape-fill {
+  fill: #ffffff;
+}

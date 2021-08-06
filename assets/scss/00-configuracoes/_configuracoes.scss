@@ -1,0 +1,36 @@
+$cores: (
+  verde: #ccff63,
+  azulEscuro: #05266e,
+  azulMedio: #0019bf,
+  azulClaro: #0061ee,
+  cinzaClaro: #ded9d9,
+  cinzaEscuro: #484848,
+  roxoEscuro: #1c0f30,
+  amareloClaro: #d9ff7a,
+  rosaClaro: #ff757f,
+  rosaMedio: #ff687d,
+  quaseBranco: #f1f1f1,
+);
+
+:root {
+  --cor-primaria: #{map-get($cores, azulEscuro)};
+  --cor-secundaria: #{map-get($cores, verde)};
+  --cor-secundaria-alpha: #{transparentize(map-get($cores, verde), 0.1)};
+  --cor-banner-bg: #{map-get($cores, roxoEscuro)};
+  --cor-quiz-numero: #{map-get($cores, azulEscuro)};
+  --cor-quiz-botao: #{map-get($cores, rosaClaro)};
+  --cor-quiz-primaria: #{map-get($cores, verde)};
+  --cor-quiz-bg: #{map-get($cores, roxoEscuro)};
+  --cor-img-border: #{map-get($cores, cinzaClaro)};
+  --cor-texto: #{map-get($cores, cinzaEscuro)};
+  --cor-texto-bold: #{map-get($cores, azulMedio)};
+  --cor-texto-light: #{map-get($cores, cinzaClaro)};
+  --cor-texto-bold-bg: var(--secundaria);
+  --cor-outline: #{map-get($cores, rosaClaro)};
+  --cor-bg: #{map-get($cores, quaseBranco)};
+  --cor-placar-bg: #{map-get($cores, roxoEscuro)};
+  --cor-placar-texto: #{map-get($cores, verde)};
+  --cor-feedback-texto: #{map-get($cores, azulEscuro)};
+  --cor-banner-bg-2: #{map-get($cores, roxoEscuro)};
+  --bg-banner: "url('../img/light_bannerBG.png')";
+}

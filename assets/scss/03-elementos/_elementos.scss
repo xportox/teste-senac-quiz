@@ -1,0 +1,71 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: url("../img/background.png"), var(--cor-bg);
+  background-size: 350px;
+  background-repeat: repeat;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+hr {
+  display: inline;
+  margin: 0 10px;
+  height: 20px;
+  align-self: center;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-family: "Bodoni Moda";
+  font-size: 30px;
+  color: var(--cor-primaria);
+}
+
+h3 {
+  font-size: 26px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Josefin Sans";
+  font-weight: 500;
+  color: var(--cor-primaria);
+}
+
+p,
+span,
+li {
+  font-family: "Montserrat";
+  font-weight: 300;
+  color: var(--cor-texto);
+}
+
+a,
+button,
+label {
+  font-family: "Josefin Sans";
+}
+
+strong {
+  font-weight: bold;
+  color: var(--cor-primaria);
+  background-color: var(--cor-secundaria);
+}

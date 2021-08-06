@@ -1,0 +1,144 @@
+@use "../05-utilidades/utilidades";
+
+.quiz {
+  display: grid;
+  // @extend %container;
+
+  @media (min-width: 672px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 850px) {
+    grid-template-columns: 400px 1fr;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 500px 1fr;
+  }
+
+  &__wrapper {
+    background-color: var(--cor-quiz-bg);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & header {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-gap: 10px;
+      align-items: center;
+    }
+  }
+
+  &__thumbnail {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 8px solid var(--cor-img-border);
+  }
+
+  &__numero {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: var(--cor-quiz-primaria);
+    margin-right: 10px;
+
+    & h3 {
+      font-size: 26px;
+      font-family: "Bodoni Moda";
+      color: var(--cor-quiz-numero);
+    }
+  }
+
+  &__titulo {
+    color: var(--cor-quiz-primaria);
+    font-weight: 500;
+    font-size: 22px;
+    margin: 10px 0;
+  }
+
+  &__form {
+    color: var(--cor-texto-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__alternativa {
+    margin: 10px 0;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    grid-gap: 10px;
+
+    &:focus-within {
+      background-color: var(--cor-quiz-primaria);
+      color: var(--cor-banner-bg);
+    }
+
+    & label {
+      @extend %pointer;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.4;
+    }
+
+    & i {
+      font-size: 28px;
+      color: var(--cor-quiz-primaria);
+    }
+
+    & i.fa-check {
+      color: var(--cor-banner-bg);
+    }
+
+    & input {
+      @extend %pointer;
+      appearance: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 20px;
+      background-color: var(--cor-texto-light);
+    }
+
+    & input:disabled {
+      background-color: var(--cor-texto);
+    }
+
+    &:focus-within input {
+      background-color: var(--cor-banner-bg);
+      color: var(--cor-banner-bg);
+    }
+
+    &:focus-within input:checked:before {
+      background-color: var(--cor-texto-light);
+    }
+
+    & input:checked:before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      border-radius: 20px;
+      background-color: var(--cor-banner-bg);
+    }
+  }
+
+  &__final {
+    font-size: 30px;
+    line-height: 1.2;
+    color: var(--cor-quiz-primaria);
+    text-align: center;
+    align-self: center;
+  }
+}

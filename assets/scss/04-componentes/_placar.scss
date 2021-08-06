@@ -1,0 +1,22 @@
+.placar {
+  display: inline-flex;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: var(--cor-placar-bg);
+
+  & h4 {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+
+  & span {
+    font-family: "Josefin Sans";
+    font-weight: 500;
+  }
+
+  & h4,
+  & span,
+  & hr {
+    color: var(--cor-placar-texto);
+  }
+}

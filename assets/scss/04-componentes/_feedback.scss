@@ -1,0 +1,41 @@
+@use '../05-utilidades/utilidades';
+
+.feedback {
+  padding: 30px;
+  width: 100%;
+  flex-direction: column;
+  background-color: var(--cor-secundaria-alpha);
+  margin-top: 10px;
+
+  @media (min-width: 672px) {
+    grid-column: span 2;
+  }
+
+  &__titulo,
+  &__corpo,
+  &__correta {
+    color: var(--cor-feedback-texto);
+  }
+
+  &__titulo {
+    font-family: "Bodoni Moda";
+    font-size: 32px;
+    margin: 0;
+  }
+
+  &__corpo {
+    font-family: "Josefin Sans";
+    font-weight: 500;
+    font-size: 22px;
+    margin: 10px 0;
+  }
+
+  &__correta {
+    font-family: "Montserrat";
+    font-size: 18px;
+  }
+
+  &__proximo {
+    align-self: center;
+  }
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz teste SENAC - Rodrigo Porto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700&family=Josefin+Sans:wght@300;500&family=Montserrat:wght@300;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./assets/css/estilos.css">
+    <script src="https://kit.fontawesome.com/b4882f8acf.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="onda">
+        <div class="custom-shape-divider-top-1628149638 onda__shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="container onda__seletorTema">
+            <select name="tema" id="tema" autocomplete="off">
+                <option value="1" >Tema 1</option>
+                <option value="2" >Tema 2</option>
+            </select>
+        
+            <p style="color: #484848;" id="temaEscolhido"></p>
+        </div>
+    </div>
+
+    <div style="position: absolute; top: 30vh; z-index: -1">
+        <svg width="279" height="225" viewBox="0 0 279 225" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M75.1154 53.2292C104.402 -0.749985 162.152 -4.3854 216.808 5.03127C239.6 8.95315 257.407 23.6771 266.553 44.7136C277.699 70.3386 283.824 97.3386 272.871 123.984C262.621 148.922 245.095 172.63 220.162 184.328C147.152 218.599 50.9852 165.328 65.7196 79.6823C67.2769 70.6354 70.5321 61.6875 75.1154 53.2292Z" fill="var(--cor-secundaria)"/>
+            <path d="M7.35501 140.719C24.5061 109.104 58.3342 106.974 90.3498 112.484C103.699 114.787 114.126 123.406 119.485 135.729C126.016 150.74 129.605 166.557 123.188 182.162C117.183 196.771 106.918 210.656 92.3133 217.51C49.5477 237.583 -6.78041 206.38 1.8498 156.214C2.76126 150.912 4.66751 145.672 7.35501 140.719V140.719Z" stroke="var(--cor-primaria)" stroke-width="1.33333" stroke-miterlimit="10"/>
+            </svg>
+    </div>
+
+    <section class="container intro">
+        <header class="intro__header">
+            <h1 class="intro__titulo"><b>Módulo 01</b><hr>Exemplo de subtítulo lorem ipsum dolor sit amet</h1>
+        </header>
+        <main class="intro__main">
+            <img src="./assets/img/thumb2.jpg" alt="Rapaz estiloso sob plano de fundo verde">
+            <div>
+                <h2>Exemplo de título de nível 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ipsum convallis, gravida ante at, congue odio. Maecenas pulvina <strong>exemplo de bold</strong>, ac faucibus. Aliquam vel metus sollicitudin, viverra massa at.</p>
+
+                <h3>Exemplo de título de nível 3:</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Etiam eget <strong>exemplo de bold</strong>, gravida ante at, congue
+                    odio. Maecenas pulvinar id est ac faucibus. Aliquam vel
+                    metus sollicitudin, viverra massa at, convallis est.
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Etiam eget ipsum convallis, gravida
+                    ante at, congue odio. Maecenas pulvinar id est ac
+                    faucibus. Aliquam vel metus sollicitudin, viverra.</p>
+
+                <h4>Exemplo de título de nível 4:</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur <strong>exemplo de bold</strong>, elit. Etiam eget ipsum convallis, gravida ante at,
+                    congue odio. Maecenas <strong>exemplo de bold</strong>, id est ac faucibus. Aliquam vel metus sollicitudin, viverra.</p>
+            </div>
+        </main>
+        <footer class="intro__footer banner">
+            <h3 class="banner__titulo">Área de destaque lorem ipsum dolor sit amet,</h3>
+            <h4 class="banner__subtitulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ipsum convallis, gravida ante at, congue odio</h4>
+        </footer>
+    </section>
+
+    <section class="container galeria">
+        <main class="galeria__wrapper">
+            <img src="./assets/img/thumb4.jpg" alt="Senhora estilosa com plano de fundo amarelo">
+            <img src="./assets/img/thumb2.jpg" alt="Rapaz estiloso sob plano de fundo verde">
+            <img src="./assets/img/thumb1.jpg" alt="Rapaz sorrindo de braços cruzados">
+            <img src="./assets/img/thumb3.jpg" alt="Menina de blusa colorida">
+        </main>
+        <section class="galeria__desc">
+            <ul>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ipsum
+convallis, gravida ante at, congue odio. Maecenas pulvinar id est ac fauci-
+bus. Aliquam vel metus sollicitudin, viverra massa at, convallis est.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ipsum
+convallis, gravida ante at, congue odio. Maecenas pulvinar est.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ipsum
+convallis, gravida ante at, congue odio.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur, convallis est.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget
+ipsum convallis, gravida ante at, conmassa at, convallis est.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget
+ipsum convallis, gravida ante at,massa at, convallis est.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget
+ipsum convallis, gravida ante at, congue odio. Maecenas pulvinar id est
+ac faucibus. Aliquam vel mett.
+                </li>
+            </ul>
+        </section>
+    </section>
+
+    <section class="container" style="position: relative">
+        <div style="position: absolute; top: 2vh; left: -40vh; z-index: -1">
+            <svg width="500" height="1000" viewBox="0 0 669 1378" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.8184 150.454C162.699 94.0994 319.36 115.99 401.272 192.62C559.693 340.834 426.454 486.516 372.376 623.188C348.235 684.193 313.329 784.183 315.719 845.86C321.11 984.886 385.074 1020.66 393.344 1119.96C404.121 1249.31 369.183 1352.59 193.772 1374.49C112.709 1384.79 48.532 1358.57 0.438232 1316.62" stroke="var(--cor-primaria)" stroke-width="1.33333" stroke-miterlimit="10"/>
+                <path d="M379.85 57.615C434.407 -14.6194 519.381 -7.21316 596.975 18.5368C629.334 29.2711 652.048 54.6514 660.751 87.3233C671.355 127.131 674.344 167.829 652.516 204.261C632.089 238.355 601.324 269.047 562.412 280.615C448.449 314.5 320.006 215.693 360.329 94.0993C364.584 81.2556 371.303 68.9274 379.85 57.615Z" fill="var(--cor-secundaria)"/>
+                </svg>
+        </div>
+        <h2>Quiz</h2>
+        <main>
+                <section class="quiz">
+                    <img class="quiz__thumbnail">
+
+                    <main class="quiz__wrapper">
+                        <header>
+                            <span class="quiz__numero">
+                                <h3></h3>
+                            </span>
+                            <h3 class="quiz__titulo"></h3>
+                        </header>
+                        <form action="#" class="quiz__form">
+                        </form>
+                    </main>
+
+                    <footer class="feedback" style="display: none;">
+                        <h3 class="feedback__titulo"></h3>
+                        <p class="feedback__corpo"></p>
+                        <h4 class="feedback__correta"></h4>
+                    </footer>
+                </section>
+        </main>
+        <div class="placar">
+            <h4>Acertos: <span class="placar__pontuacao">0</span></h4>
+            <hr>
+            <h4>Questão <span class="placar__indiceAtual">1</span> de <span class="placar__indiceTotal">4</span></h4>
+        </div>
+    </section>
+
+    <div class="onda onda--reverse">
+        <div class="custom-shape-divider-top-1628149638 onda__shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </div>
+
+</body>
+<script src="./assets/js/teste.js"></script>
+
+</html>

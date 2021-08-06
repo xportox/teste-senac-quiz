@@ -1,0 +1,465 @@
+@charset "UTF-8";
+:root {
+  --cor-primaria: #05266e;
+  --cor-secundaria: #ccff63;
+  --cor-secundaria-alpha: rgba(204, 255, 99, 0.9);
+  --cor-banner-bg: #1c0f30;
+  --cor-quiz-numero: #05266e;
+  --cor-quiz-botao: #ff757f;
+  --cor-quiz-primaria: #ccff63;
+  --cor-quiz-bg: #1c0f30;
+  --cor-img-border: #ded9d9;
+  --cor-texto: #484848;
+  --cor-texto-bold: #0019bf;
+  --cor-texto-light: #ded9d9;
+  --cor-texto-bold-bg: var(--secundaria);
+  --cor-outline: #ff757f;
+  --cor-bg: #f1f1f1;
+  --cor-placar-bg: #1c0f30;
+  --cor-placar-texto: #ccff63;
+  --cor-feedback-texto: #05266e;
+  --cor-banner-bg-2: #1c0f30;
+  --bg-banner: "url('../img/light_bannerBG.png')";
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: url("../img/background.png"), var(--cor-bg);
+  background-size: 350px;
+  background-repeat: repeat;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+hr {
+  display: inline;
+  margin: 0 10px;
+  height: 20px;
+  align-self: center;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-family: "Bodoni Moda";
+  font-size: 30px;
+  color: var(--cor-primaria);
+}
+
+h3 {
+  font-size: 26px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Josefin Sans";
+  font-weight: 500;
+  color: var(--cor-primaria);
+}
+
+p,
+span,
+li {
+  font-family: "Montserrat";
+  font-weight: 300;
+  color: var(--cor-texto);
+}
+
+a,
+button,
+label {
+  font-family: "Josefin Sans";
+}
+
+strong {
+  font-weight: bold;
+  color: var(--cor-primaria);
+  background-color: var(--cor-secundaria);
+}
+
+.botao, .quiz__alternativa label, .quiz__alternativa input {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1350px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.quiz {
+  display: grid;
+}
+@media (min-width: 672px) {
+  .quiz {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 850px) {
+  .quiz {
+    grid-template-columns: 400px 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .quiz {
+    grid-template-columns: 500px 1fr;
+  }
+}
+.quiz__wrapper {
+  background-color: var(--cor-quiz-bg);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.quiz__wrapper header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 10px;
+  align-items: center;
+}
+.quiz__thumbnail {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 8px solid var(--cor-img-border);
+}
+.quiz__numero {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: var(--cor-quiz-primaria);
+  margin-right: 10px;
+}
+.quiz__numero h3 {
+  font-size: 26px;
+  font-family: "Bodoni Moda";
+  color: var(--cor-quiz-numero);
+}
+.quiz__titulo {
+  color: var(--cor-quiz-primaria);
+  font-weight: 500;
+  font-size: 22px;
+  margin: 10px 0;
+}
+.quiz__form {
+  color: var(--cor-texto-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.quiz__alternativa {
+  margin: 10px 0;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  grid-gap: 10px;
+}
+.quiz__alternativa:focus-within {
+  background-color: var(--cor-quiz-primaria);
+  color: var(--cor-banner-bg);
+}
+.quiz__alternativa label {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+.quiz__alternativa i {
+  font-size: 28px;
+  color: var(--cor-quiz-primaria);
+}
+.quiz__alternativa i.fa-check {
+  color: var(--cor-banner-bg);
+}
+.quiz__alternativa input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 20px;
+  background-color: var(--cor-texto-light);
+}
+.quiz__alternativa input:disabled {
+  background-color: var(--cor-texto);
+}
+.quiz__alternativa:focus-within input {
+  background-color: var(--cor-banner-bg);
+  color: var(--cor-banner-bg);
+}
+.quiz__alternativa:focus-within input:checked:before {
+  background-color: var(--cor-texto-light);
+}
+.quiz__alternativa input:checked:before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 20px;
+  background-color: var(--cor-banner-bg);
+}
+.quiz__final {
+  font-size: 30px;
+  line-height: 1.2;
+  color: var(--cor-quiz-primaria);
+  text-align: center;
+  align-self: center;
+}
+
+.botao {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  align-self: center;
+  background-color: transparent;
+  border: 3px solid var(--cor-quiz-botao);
+  color: var(--cor-quiz-botao);
+  padding: 6px 20px;
+  font-size: 16px;
+}
+
+.feedback {
+  padding: 30px;
+  width: 100%;
+  flex-direction: column;
+  background-color: var(--cor-secundaria-alpha);
+  margin-top: 10px;
+}
+@media (min-width: 672px) {
+  .feedback {
+    grid-column: span 2;
+  }
+}
+.feedback__titulo, .feedback__corpo, .feedback__correta {
+  color: var(--cor-feedback-texto);
+}
+.feedback__titulo {
+  font-family: "Bodoni Moda";
+  font-size: 32px;
+  margin: 0;
+}
+.feedback__corpo {
+  font-family: "Josefin Sans";
+  font-weight: 500;
+  font-size: 22px;
+  margin: 10px 0;
+}
+.feedback__correta {
+  font-family: "Montserrat";
+  font-size: 18px;
+}
+.feedback__proximo {
+  align-self: center;
+}
+
+.placar {
+  display: inline-flex;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: var(--cor-placar-bg);
+}
+.placar h4 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+.placar span {
+  font-family: "Josefin Sans";
+  font-weight: 500;
+}
+.placar h4, .placar span, .placar hr {
+  color: var(--cor-placar-texto);
+}
+
+.intro__header {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.intro__titulo b {
+  font-family: "Bodoni Sans";
+}
+.intro__main {
+  padding: 10px;
+  display: grid;
+  align-items: center;
+  grid-gap: 20px;
+}
+@media (min-width: 768px) {
+  .intro__main {
+    grid-gap: 40px;
+    grid-template-columns: 400px 1fr;
+  }
+}
+.intro__main img {
+  position: relative;
+  top: 5px;
+  left: 5px;
+  aspect-ratio: 1/1;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.5), -10px -15px 0px 0px var(--cor-primaria);
+  margin-bottom: 10px;
+}
+.intro__main h2 {
+  font-size: 30px;
+  line-height: 1.2;
+}
+.intro__main h3, .intro__main h2, .intro__main h4 {
+  margin-bottom: 0px;
+}
+.intro__main p {
+  margin-bottom: 30px;
+}
+.intro__main h3 + p {
+  -moz-columns: 2;
+       columns: 2;
+}
+
+.banner {
+  padding: 20px 40px;
+  background-image: var(--bg-banner);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom right;
+  background-color: var(--cor-banner-bg-2);
+  margin: 40px 0;
+}
+.banner__titulo {
+  color: var(--cor-secundaria);
+  font-family: "Bodoni Moda";
+  line-height: 1.2;
+  margin: 0;
+}
+.banner__subtitulo {
+  font-size: 20px;
+  margin: 0;
+  margin-top: 10px;
+  font-weight: 300;
+  background-color: var(--cor-banner-bg-2);
+  color: var(--cor-secundaria);
+}
+
+.galeria__wrapper {
+  display: grid;
+  grid-gap: 20px;
+  padding: 20px;
+  background-color: var(--cor-primaria);
+}
+.galeria__wrapper img {
+  aspect-ratio: 4/5;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 30%;
+     object-position: 30%;
+}
+@media (min-width: 576px) {
+  .galeria__wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 768px) {
+  .galeria__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .galeria__wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.galeria__desc {
+  margin-top: 20px;
+}
+.galeria__desc ul {
+  list-style: none;
+}
+@media (min-width: 576px) {
+  .galeria__desc ul {
+    -moz-columns: 2;
+         columns: 2;
+  }
+}
+.galeria__desc li {
+  color: var(--cor-texto);
+  margin: 20px 0;
+}
+.galeria__desc li::before {
+  content: "▪";
+  display: inline-block;
+  color: var(--cor-primaria);
+  width: 1em;
+  margin-left: -1em;
+}
+
+.onda {
+  height: 100px;
+  display: flex;
+  margin-top: -10px;
+  margin-right: -8px;
+  margin-left: -8px;
+  margin-bottom: 150px;
+  background-color: white;
+  position: relative;
+}
+.onda__seletorTema {
+  align-self: center;
+  display: inline-flex;
+  width: auto;
+}
+.onda__seletorTema select {
+  font-size: 20px;
+}
+.onda--reverse {
+  transform: scaleY(-1);
+  margin-bottom: -10px;
+  padding-bottom: 190px;
+  margin-top: 150px;
+}
+
+.custom-shape-divider-top-1628149638 {
+  position: absolute;
+  bottom: -150px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1628149638 svg {
+  position: relative;
+  display: block;
+  width: calc(200% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-top-1628149638 .shape-fill {
+  fill: #ffffff;
+}

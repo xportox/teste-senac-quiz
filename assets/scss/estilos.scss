@@ -1,0 +1,14 @@
+@use "00-configuracoes/configuracoes";
+@use "02-generico/normalize";
+@use "03-elementos/elementos";
+
+@use "04-componentes/quiz";
+@use "04-componentes/botao";
+@use "04-componentes/feedback";
+@use "04-componentes/placar";
+@use "04-componentes/intro";
+@use "04-componentes/banner";
+@use "04-componentes/_galeria";
+@use "04-componentes/onda";
+
+@use '05-utilidades/utilidades';
