@@ -31,3 +31,5 @@ alternativas e feedbacks.
 Desenvolvimento do zero de uma página _mobile-first_ utilizando HTML5, SASS com metodologia ITCSS/BEM e JS vanilla. A escolha do tema é persistente (localStorage). As questões são puxadas através de uma chamada assíncrona utilizado async/await e fetch API, requisitando o JSON disponível no meu [Gist com o conteúdo](https://gist.github.com/xportox/8e4444a309ceb4c89c27cce2ea5da674). A renderização da interface do quiz é feita a partir desses dados. 
 
 **Teste realizado entre os dias 01/08/2021 e 05/08/2021**
+
+[Visualizar teste](https://reverent-joliot-e10e0c.netlify.app/)
